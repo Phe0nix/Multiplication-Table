@@ -1,0 +1,40 @@
+:root{
+  --background: #6a6af0;
+}
+.container{
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  font-family: Helvetica;
+}
+input{
+  width: inherit;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.head{
+  background: var(--background);
+  padding: 10px;
+  color: white;
+  line-height: 25px;
+  font-size: 18px;
+}
+.value{
+  padding: 0 10px;
+  margin-top: 0px;
+  border-right: 1px solid var(--background);
+  border-left: 1px solid var(--background);
+  margin-bottom: 0;
+  padding: 6px 10px;
+  font-size: 18px;
+}
+.value:last-child{
+  border-bottom: 1px solid var(--background);
+}
+.value span{
+  margin: 4px;
+}
