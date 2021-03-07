@@ -12,12 +12,15 @@ function multiplication(e){
 there, Try enter some Numbers and See the Magic!</div>`;
   }
   else{
-      output='';
-  for(i=1;i<11;i++){
-    output += `<p class='value'>${number.value}<span>x<span>${i} = ${number.value*i}</p>`;
-  }
-  rsult.innerHTML = `<div class='head'>This is ${number.value}'s Multiplication Table</div>
-${output}`;
+    output='';
+    let num = document.querySelector('.multiNumber');
+    num.oninput = function() {
+     for(i=1;i<this.value;i++){
+        output += `<p class='value'>${number.value}<span>x<span>${i} = ${number.value*i}</p>`;
+      }   
+    }
+    rsult.innerHTML = `<div class='head'>This is ${number.value}'s Multiplication Table</div> 
+    ${output}`;
   }
 }
 
