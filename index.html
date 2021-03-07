@@ -37,13 +37,15 @@
   <a href="#" style="color:#6D9F00;text-decoration:none;" class='printfriendly' title="Printer Friendly and PDF">PDF</a>
   <div class='modal hide'>
     <span class='close'>close</span>
-    <button class='yes' onclick='window.print();return false;'>Yes</button><button class='no'>No</button>
+    <button class='yes' onclick='window.print();return false;'>Yes</button>
+    <button class='no'>No</button>
   </div>
   <script>
     document.querySelector('.printfriendly').onclick = function() {
       document.querySelector('.modal').classList.toggle('hide');
       document
     }
+    console.log(document.querySelector('.no'));
     [document.querySelector('.close'), document.querySelector('.no')].forEach(d=>{
       d.onclick = function() {
         d.parentElement.classList.add('hide');
