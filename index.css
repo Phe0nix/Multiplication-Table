@@ -56,13 +56,20 @@ a.button span {
     height: 23px;
     padding-left: 35px;
 }
+.inputFields {
+  display: flex;
+}
 input{
-  width: inherit;
+  width: calc(100% - 20%);
   height: 40px;
   box-sizing: border-box;
   padding: 5px 15px;
   font-size: 18px;
   margin-bottom: 10px;
+}
+input.multiNumber {
+  width: 20%;
+  padding: 5px 10px;
 }
 .head{
   background: var(--background);
