@@ -14,10 +14,12 @@ there, Try enter some Numbers and See the Magic!</div>`;
   else{
     output='';
     let num = document.querySelector('.multiNumber');
+    let numValue = num.value;
     num.oninput = function() {
-     for(i=1;i<this.value;i++){
-        output += `<p class='value'>${number.value}<span>x<span>${i} = ${number.value*i}</p>`;
-      }   
+       numValue = this.value; 
+    }
+    for(i=1;i<numValue;i++){
+      output += `<p class='value'>${number.value}<span>x<span>${i} = ${number.value*i}</p>`;
     }
     rsult.innerHTML = `<div class='head'>This is ${number.value}'s Multiplication Table</div> 
     ${output}`;
