@@ -2,12 +2,6 @@ var number = document.querySelector("input"), i,
     output='',
     rsult = document.querySelector(".result");
 
-function forLoop(n) {
-  for(i=1;i<n;i++){
-    output += `<p class='value'>${number.value}<span>x<span>${i} = ${number.value*i}</p>`;
-  }
-}
-
 function multiplication(e){
   if(isNaN(number.value)){
   rsult.innerHTML = `<div class='head'>You know, what is number,
@@ -21,9 +15,11 @@ function multiplication(e){
     let num = document.querySelector('.multiNumber');
     let numValue = num.value;
     num.oninput = function() {
-       forLoop(this.value);
+     numValue = this.value;
     }
-    forLoop(numValue); 
+    for(i=1;i<numValue;i++){
+      output += `<p class='value'>${number.value}<span>x<span>${i} = ${number.value*i}</p>`;
+    }
     rsult.innerHTML = `<div class='head'>This is ${number.value}'s Multiplication Table</div> 
     ${output}`;
   }
