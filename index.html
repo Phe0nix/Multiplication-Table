@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width">
   <title>Multiplication Table</title>
   <link rel="stylesheet" href="index.css"/>
+  <style>
+    .hide {
+      display: none;
+    }
+    .modal {
+      border: 1px solid red;
+      padding: 20px;
+    }
+    .modal .button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -20,8 +34,21 @@
     <input type="text" placeholder="Wanna See Magic! Then Type any number"/>
 <div class="result"></div>
   </div>
-  <a href="#" style="color:#6D9F00;text-decoration:none;" onclick='console.log("hi")' title="Printer Friendly and PDF">PDF</a>
+  <a href="#" style="color:#6D9F00;text-decoration:none;" class='printfriendly' title="Printer Friendly and PDF">PDF</a>
+  <div class='modal hide'>
+    <span class='close'>close</span>
+    <button class='yes' onclick='window.print();return false;'>Yes</button><button class='no'>No</button>
+  </div>
   <script>
+    document.querySelector('.printfriendly').onclick = function() {
+      document.querySelector('.modal').classList.toggle('hide');
+      document
+    }
+    [document.querySelector('.close'), document.querySelector('.no')].forEach(d=>{
+      d.onclick = function() {
+        d.parentElement.classList.add('hide');
+      }
+    });
     var pfHeaderImgUrl = '';
     var pfHeaderTagline = '';
     var pfdisableClickToDel = 0;
