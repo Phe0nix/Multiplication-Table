@@ -23,7 +23,7 @@ function multiplication(e){
     num.oninput = function() {
        forLoop(this.value);
     }
-    forLoop(numValue);
+    forLoop(numValue); 
     rsult.innerHTML = `<div class='head'>This is ${number.value}'s Multiplication Table</div> 
     ${output}`;
   }
